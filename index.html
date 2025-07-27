@@ -164,7 +164,43 @@
 		pointer-events: none;
 		z-index: 1;
 	}
+	.time-box {
+    background-color: #fbd6d2;
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    color: #bb2649;
+    font-weight: bold;
+    text-align: center;
+    min-width: 55px;
+  }
 
+  .time-box span {
+    font-size: 20px;
+    display: block;
+  }
+
+  .label {
+    font-size: 12px;
+    margin-top: 2px;
+    color: #444;
+  }
+
+  /* Responsive cho điện thoại */
+  @media (max-width: 480px) {
+    .time-box {
+      min-width: 45px;
+      padding: 8px 10px;
+    }
+
+    .time-box span {
+      font-size: 18px;
+    }
+
+    .label {
+      font-size: 11px;
+    }
+  }
   </style>
 </head>
 <body>
