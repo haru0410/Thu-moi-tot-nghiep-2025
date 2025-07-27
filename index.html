@@ -222,6 +222,58 @@
     </div>
     <div class="footer">Hân hạnh được đón tiếp bạn!</div>
   </div>
+<!-- Nút tròn bên trái -->
+<div id="floatingMapBtn" onclick="toggleMap()" style="
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+">
+  🗺️
+</div>
+
+<!-- Map hiện ra sau khi bấm -->
+<div id="mapContainer" style="
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  background: #fff0f5;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 9999;
+  width: 320px;
+  text-align: center;
+">
+  <h3 style="margin-top: 0;">📍 Địa điểm tổ chức nè</h3>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.627295296835!2d105.42976397485107!3d10.371655789753556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a731e7546fd7b%3A0x953539cd7673d9e5!2sAn%20Giang%20University!5e0!3m2!1sen!2s!4v1753602693858!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">" 
+    width="300" 
+    height="200" 
+    style="border:0; border-radius: 12px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  <br/>
+  <a href="https://maps.app.goo.gl/abcxyz" target="_blank" style="margin-top: 8px; display:inline-block;">Xem bản đồ lớn 💗</a>
+</div>
+<script>
+  function toggleMap() {
+    const map = document.getElementById("mapContainer");
+    map.style.display = (map.style.display === "none" || map.style.display === "") ? "block" : "none";
+  }
+</script>
   <div style="text-align: center; margin-top: 40px;">
   <p style="font-size: 18px; color: #444;">Bắt đầu sau</p>
   <div id="countdown-container" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
